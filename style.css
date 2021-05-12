@@ -43,7 +43,7 @@ body{
   align-items: center;
   flex-direction: column;
   background-color: #ffffff;
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   border: 1px solid lightgray;
 }
@@ -55,7 +55,6 @@ body{
 }
 .instagram-form{
   display: flex;
-  flex: 1,
 }
 .instagram-form form{
   display: flex;
@@ -65,32 +64,107 @@ body{
   min-width: 20rem;
 }
 .instagram-form form input{
-  padding: 5px;
+  padding: 10px 5px;
   background: rgb(250, 250, 250);
   border: solid 1px lightgray;
   margin-top: 10px;
 }
 .instagram-form form button{
   margin-top: 10px;
-  padding: 5px 0;
+  padding: 10px 0;
   background: #b2dffc;
   border: none;
   color: #fff;
+  
 }
 .separador{
   text-align: center;
   display: inline-block;
   display: flex;
   flex-direction: row;
+  color: lightgray; 
+  padding: 10px 0;
 }
 .separador::after, .separador::before{
   content: '';
   display: block;
   width: 100%;
   height: 2px;
-  background: #b2dffc;
+  background: lightgray;
+  align-self: center;  
+}
+.separador::after{
+  margin-left: 15px;
+}
+.separador::before{
+  margin-right: 15px;
+}
+.login-facebook{
+  display: flex;
+  text-align: center;
+  color: #385185;
+  font-size: 1rem;
   align-self: center;
-  
+}
+.login-facebook::before{
+  content:'';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(./img/facebook.png);
+  margin-right: 10px;
+}
+.perdeu-senha{
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px 0;
+  color: #00376b;
+}
+.group:nth-child(2) {
+  margin-top: 10px;
+}
+.nova-conta span{
+  color:#0095f6;
+}
+.get-the-app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.3rem 0;
+}
+.lojas{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+}
+.lojas-download{
+  height: 3rem;
+  width: 10rem;
+  background-size: cover;
+}
+.lojas:nth-child(1){
+  background-image: url('./img/apple-button.png');
+}
+.lojas:nth-child(1){
+  background-image: url('./img/googleplay-button.png');
 }
 
+@media (max-width: 1024px){
+  .instagram-wrapper {
+    width: 80%;
+  }
+}
+@media(max-width: 650px){
+  .instagram-wrapper {
+    width: 80%;
+    justify-content: center;
+  }
+  .instagram-phone{
+    display: none;
+  }
+}
 
